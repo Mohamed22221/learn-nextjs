@@ -4,8 +4,11 @@ import React from 'react'
 const projectsDetails= () => {
     const router = useRouter()
     console.log(router)
+    
   return (
-    <div>projectsDetails</div>
+    <div>
+       <h1>Start Portfolio Details</h1> 
+    </div>
   )
 }
 
