@@ -15,7 +15,14 @@ const portfolioPage = () => {
         return (
           <ul key={project.id}>
             <li>
-              <Link href={`portfolio/${project.id}`}>{project.name}</Link>
+              <Link
+                href={{
+                  pathname: "/portfolio/[projectId]",
+                  query: { projectId: project.id },
+                }}
+              >
+                {project.name}
+              </Link>
             </li>
           </ul>
         );
