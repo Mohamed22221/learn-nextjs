@@ -1,6 +1,10 @@
 import React from "react";
 
 const TodoDetailsPage = ({ todoDatails }) => {
+  if (!todoDatails) {
+    return  <div>loading...</div>
+   
+  }
   return <div>{todoDatails.title}</div>;
 };
 
@@ -15,7 +19,7 @@ export async function getStaticProps(context) {
     props: {
       todoDatails,
     },
-    revalidate: 5, // Regenerate the page every 20 seconds
+    revalidate: 30, // Regenerate the page every 20 seconds
   };
 }
 
